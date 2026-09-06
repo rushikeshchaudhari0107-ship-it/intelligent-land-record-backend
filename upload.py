@@ -2,10 +2,10 @@ import os
 import uuid
 
 from fastapi import APIRouter, UploadFile, File, HTTPException
-from backend.ocr import extract_text
-from backend.extractor import extract_land_record
-from backend.validator import validate_land_record
-from backend.db_connection import get_db_connection
+from ocr import extract_text
+from extractor import extract_land_record
+from validator import validate_land_record
+from db_connection import get_db_connection
 
 router = APIRouter(
     prefix="/api/documents",

@@ -3,8 +3,8 @@ import os
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from backend.db_connection import get_db_connection
-from backend.upload import router as upload_router
+from db_connection import get_db_connection
+from upload import router as upload_router
 
 app = FastAPI(
     title="Intelligent Land Record System",
