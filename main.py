@@ -17,6 +17,8 @@ app.include_router(upload_router)
 
 from fastapi.middleware.cors import CORSMiddleware
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
