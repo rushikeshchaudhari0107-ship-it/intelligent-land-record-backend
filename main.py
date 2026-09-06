@@ -15,16 +15,14 @@ app = FastAPI(
 
 app.include_router(upload_router)
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        origin
-        for origin in [
-            "http://localhost:3000",
-            "http://127.0.0.1:3000",
-            os.getenv("FRONTEND_URL", "")
-        ]
-        if origin
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        "https://intelligent-land-record-frontend.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
